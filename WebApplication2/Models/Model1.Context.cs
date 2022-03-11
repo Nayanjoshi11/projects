@@ -26,5 +26,6 @@ namespace WebApplication2.Models
         }
     
         public virtual DbSet<Table_1> Table_1 { get; set; }
+        public virtual DbSet<Table_2> Table_2 { get; set; }
     }
 }
