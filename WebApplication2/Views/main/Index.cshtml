@@ -1,8 +1,29 @@
-﻿
+﻿@model List<WebApplication2.Models.Table_1>
+
+
 @{
-    ViewBag.Title = "newview";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Index";
+    int sn = 0;
 }
 
-<h2>newview</h2>
 
+<h2>Employee List</h2>
+<table class="table" border="1">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>address</th>
+        <th>contact</th>
+    </tr>
+
+    @foreach (var data in Model)
+    {
+        <tr>
+            <td>@(++sn)</td>
+            <td>@data.id</td>
+            <td>@data.name</td>
+            <td>@data.address</td>
+            <td>@data.contact</td>
+        </tr>
+    }
+</table>
