@@ -213,6 +213,7 @@
     <Content Include="Views\mainview.cshtml" />
     <Content Include="Views\main\Index.cshtml" />
     <Content Include="Views\new\sub.cshtml" />
+    <Content Include="Views\main\create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

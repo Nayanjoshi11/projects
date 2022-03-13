@@ -16,5 +16,17 @@ namespace WebApplication2.Controllers
             List<Table_1> data = db.Table_1.ToList();
             return View(data);
         }
+        public ActionResult create()
+        {
+            return View();
+        }
+
+        public ActionResult Savedata(Table_1 table_1)
+        {
+            db.Table_1.Add(table_1);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }
