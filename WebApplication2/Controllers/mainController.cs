@@ -21,7 +21,7 @@ namespace WebApplication2.Controllers
             return View();
         }
 
-        public ActionResult Savedata(Table_1 table_1)
+        public ActionResult SaveData(Table_1 table_1)
         {
             db.Table_1.Add(table_1);
             db.SaveChanges();
