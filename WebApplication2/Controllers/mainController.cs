@@ -21,6 +21,21 @@ namespace WebApplication2.Controllers
             return View();
         }
 
+        public ActionResult Edit(int id)
+        {
+            Table_1 data = db.Table_1.Find(id);//find data using primary key
+            return View(data);
+        }
+
+        public ActionResult Updatedata(Table_1 table_1)
+        {
+            db.Entry(table_1).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
+
         public ActionResult SaveData(Table_1 table_1)
         {
             db.Table_1.Add(table_1);

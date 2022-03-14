@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "edit";
+
+}
+<h2>EDIT</h2>
+
+@using (Html.BeginForm("UpdateData", "main"))
+{
+    <input type="hidden" name="id" value="@Model.id"/>
+    <label class="col-md-2">Name</label>
+    <div>
+        <input type="text" name="name" class="form-control" />
+    </div>
+    <label class="col-md-2">Address</label>
+    <div>
+        <input type="text" name="address" class="form-control" />
+    </div>
+    <label class="col-md-2">Contact</label>
+    <div>
+        <input type="text" name="contact" class="form-control" />
+    </div>
+    <div>
+        <input type="submit" class="btn btn-success" value="Save" />
+
+    </div>
+}
+

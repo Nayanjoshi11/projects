@@ -214,6 +214,7 @@
     <Content Include="Views\main\Index.cshtml" />
     <Content Include="Views\new\sub.cshtml" />
     <Content Include="Views\main\create.cshtml" />
+    <Content Include="Views\main\edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
