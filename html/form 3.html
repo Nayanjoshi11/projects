@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta hhtp-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <script>
+        function validateform(){
+            var email=document.myform.email.value;
+            var password=document.myform.password.value;
+
+            if(email==null || email==""){
+                alert("Email must be Entered");
+                return false;
+            
+            }else if(password.length<6){
+                alert("Password must be at least 6 characters long");
+                return false;
+            }
+        }
+    </script>
+
+    <body>
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="D:\4th sem\form 3.html">Login</a>
+            <a href="D:\4th sem\bordered form.html">Sign in</a>
+            <a href="#about">About</a>
+          </div>
+        <h2>Login</h2>
+        <fieldset>
+            <form name="myform" method="post" action="#" onsubmit="return validateform()" >
+                <label>Firstname : <input type="text"></label><br><br>
+                <label>Lastname : <input type="text"></label><br><br>
+                <label>email : <input type="text"></label><br><br>
+                <label>password : <input type="password"></label><br><br>
+                <input type="submit" value="login" name="submit">
+            </form>
+        </fieldset>
+       
+    </body>
+</html>
