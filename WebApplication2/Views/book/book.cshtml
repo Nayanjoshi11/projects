@@ -27,14 +27,19 @@
 
     @foreach (var data in Model)
     {
-        <tr>
-            <td>@(++sn)</td>          
-            <td>@data.Bname</td>
-            <td>@data.author</td>
-            <td>@data.publisher</td>
-            <td>@data.issued</td>
-            <td>@data.returned</td>
-        </tr>
+<tr>
+    <td>@(++sn)</td>
+    <td>@data.Bname</td>
+    <td>@data.author</td>
+    <td>@data.publisher</td>
+    <td>@data.issued</td>
+    <td>@data.returned</td>
+    <td><a href="@Url.Action("edit", new {id=data.Bid})">edit</a></td>
+</tr>
     }
 
 </table>
+
+<a href="@Url.Action("create")">
+    <h2>Add New Record</h2>
+</a>
