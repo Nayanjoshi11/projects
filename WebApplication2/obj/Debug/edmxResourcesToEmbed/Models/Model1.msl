@@ -21,5 +21,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Table_3">
+      <EntityTypeMapping TypeName="empModel.Table_3">
+        <MappingFragment StoreEntitySet="Table_3">
+          <ScalarProperty Name="returned" ColumnName="returned" />
+          <ScalarProperty Name="issued" ColumnName="issued" />
+          <ScalarProperty Name="publisher" ColumnName="publisher" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="Bname" ColumnName="Bname" />
+          <ScalarProperty Name="Bid" ColumnName="Bid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

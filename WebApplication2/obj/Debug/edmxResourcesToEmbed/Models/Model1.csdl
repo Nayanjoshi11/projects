@@ -3,6 +3,7 @@
   <EntityContainer Name="empEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Table_1" EntityType="empModel.Table_1" />
     <EntitySet Name="Table_2" EntityType="empModel.Table_2" />
+    <EntitySet Name="Table_3" EntityType="empModel.Table_3" />
   </EntityContainer>
   <EntityType Name="Table_1">
     <Key>
@@ -21,5 +22,16 @@
     <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Contact" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Table_3">
+    <Key>
+      <PropertyRef Name="Bid" />
+    </Key>
+    <Property Name="Bid" Type="Int32" Nullable="false" />
+    <Property Name="Bname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="author" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="publisher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="issued" Type="DateTime" Precision="3" />
+    <Property Name="returned" Type="DateTime" Precision="3" />
   </EntityType>
 </Schema>

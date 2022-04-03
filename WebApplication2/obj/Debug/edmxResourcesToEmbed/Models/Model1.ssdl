@@ -18,8 +18,20 @@
     <Property Name="Contact" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="Table_3">
+    <Key>
+      <PropertyRef Name="Bid" />
+    </Key>
+    <Property Name="Bid" Type="int" Nullable="false" />
+    <Property Name="Bname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="author" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="publisher" Type="nvarchar" MaxLength="50" />
+    <Property Name="issued" Type="datetime" />
+    <Property Name="returned" Type="datetime" />
+  </EntityType>
   <EntityContainer Name="empModelStoreContainer">
     <EntitySet Name="Table_1" EntityType="Self.Table_1" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Table_2" EntityType="Self.Table_2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_3" EntityType="Self.Table_3" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

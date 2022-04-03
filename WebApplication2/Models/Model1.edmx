@@ -23,9 +23,21 @@
           <Property Name="Contact" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="Table_3">
+          <Key>
+            <PropertyRef Name="Bid" />
+          </Key>
+          <Property Name="Bid" Type="int" Nullable="false" />
+          <Property Name="Bname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="author" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="publisher" Type="nvarchar" MaxLength="50" />
+          <Property Name="issued" Type="datetime" />
+          <Property Name="returned" Type="datetime" />
+        </EntityType>
         <EntityContainer Name="empModelStoreContainer">
           <EntitySet Name="Table_1" EntityType="Self.Table_1" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_2" EntityType="Self.Table_2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_3" EntityType="Self.Table_3" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -34,6 +46,7 @@
         <EntityContainer Name="empEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Table_1" EntityType="empModel.Table_1" />
           <EntitySet Name="Table_2" EntityType="empModel.Table_2" />
+          <EntitySet Name="Table_3" EntityType="empModel.Table_3" />
         </EntityContainer>
         <EntityType Name="Table_1">
           <Key>
@@ -53,7 +66,18 @@
           <Property Name="Contact" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-      </Schema>
+        <EntityType Name="Table_3">
+          <Key>
+            <PropertyRef Name="Bid" />
+          </Key>
+          <Property Name="Bid" Type="Int32" Nullable="false" />
+          <Property Name="Bname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="author" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="publisher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="issued" Type="DateTime" Precision="3" />
+          <Property Name="returned" Type="DateTime" Precision="3" />
+        </EntityType>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -76,6 +100,18 @@
                 <ScalarProperty Name="Contact" ColumnName="Contact" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_3">
+            <EntityTypeMapping TypeName="empModel.Table_3">
+              <MappingFragment StoreEntitySet="Table_3">
+                <ScalarProperty Name="returned" ColumnName="returned" />
+                <ScalarProperty Name="issued" ColumnName="issued" />
+                <ScalarProperty Name="publisher" ColumnName="publisher" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="Bname" ColumnName="Bname" />
+                <ScalarProperty Name="Bid" ColumnName="Bid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

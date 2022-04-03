@@ -1,0 +1,40 @@
+﻿
+@model List<WebApplication2.Models.Table_3>
+@{
+    ViewBag.Title = "book";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int sn = 0;
+}
+
+
+
+
+<style>
+    table, td, th {
+        background-color: brown;
+    }
+</style>
+<h2>Book List</h2>
+<table class="table" border="1">
+    <tr>
+        <th>Bid</th>
+        <th>Bname</th>
+        <th>author</th>
+        <th>publisher</th>
+        <th>issued</th>
+        <th>returned</th>
+    </tr>
+
+    @foreach (var data in Model)
+    {
+        <tr>
+            <td>@(++sn)</td>          
+            <td>@data.Bname</td>
+            <td>@data.author</td>
+            <td>@data.publisher</td>
+            <td>@data.issued</td>
+            <td>@data.returned</td>
+        </tr>
+    }
+
+</table>
