@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "cret";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+<form action="SaveData">
+
+    <label class="col-md-2">Name</label>
+    <div>
+        <input type="text" name="name" class="form-control" />
+    </div>
+    <label class="col-md-2">Contact</label>
+    <div>
+        <input type="text" name="contact" class="form-control" />
+    </div>
+    <label class="col-md-2">Address</label>
+    <div>
+        <input type="text" name="address" class="form-control" />
+    </div>
+    <div>
+        <input type="submit" class="btn btn-success" value="Save" />
+
+    </div>
+</form>
+

@@ -129,11 +129,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\bookController.cs" />
+    <Compile Include="Controllers\empsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\mainController.cs" />
     <Compile Include="Controllers\newController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\employee_salary_detail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -221,6 +225,11 @@
     <Content Include="Views\main\edit.cshtml" />
     <Content Include="Views\book.cshtml" />
     <Content Include="Views\book\book.cshtml" />
+    <Content Include="Views\emps\emps.cshtml" />
+    <Content Include="Views\emps\addd.cshtml" />
+    <Content Include="Views\emps\add.cshtml" />
+    <Content Include="Views\new\cret.cshtml" />
+    <Content Include="Views\new\editt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

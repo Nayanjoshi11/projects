@@ -1,0 +1,38 @@
+﻿@model List<WebApplication2.Models.employee_salary_detail>
+
+
+@{
+    ViewBag.Title = "Index";
+    int sn = 0;
+}
+
+
+<style>
+    table, td, th {
+        background-color: brown;
+    }
+</style>
+<h2>employee salary list</h2>
+<table class="table" border="1">
+    <tr>
+        <th>id</th>
+        <th>salary paid</th>
+        <th>paid salary </th>      
+    </tr>
+
+    @foreach (var data in Model)
+    {
+        <tr>
+            <td>@data.employee_id</td>
+            <td>@data.salary_paid</td>
+            <td>@data.paid_date</td>
+            <td><a href="@Url.Action("addd", new {id=data.employee_id})">edit</a></td>
+        </tr>
+    }
+
+</table>
+
+<a href="@Url.Action("add")">
+    <h2>Add New Record</h2>
+</a>
+

@@ -12,13 +12,18 @@ namespace WebApplication2.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Table_1
+    public partial class employee_salary_detail
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string address { get; set; }
-        public string contact { get; set; }
+        public int employee_id { get; set; }
+        public decimal salary_paid { get; set; }
+
+        internal static employee_salary_detail Find(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Nullable<System.DateTime> paid_date { get; set; }
     
-        public virtual employee_salary_detail employee_salary_detail { get; set; }
+        public virtual Table_1 Table_1 { get; set; }
     }
 }

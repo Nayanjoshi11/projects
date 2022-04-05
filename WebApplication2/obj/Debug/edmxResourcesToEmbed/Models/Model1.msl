@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="empModelStoreContainer" CdmEntityContainer="empEntities1">
+    <EntitySetMapping Name="employee_salary_detail">
+      <EntityTypeMapping TypeName="empModel.employee_salary_detail">
+        <MappingFragment StoreEntitySet="employee_salary_detail">
+          <ScalarProperty Name="paid_date" ColumnName="paid_date" />
+          <ScalarProperty Name="salary_paid" ColumnName="salary_paid" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Table_1">
       <EntityTypeMapping TypeName="empModel.Table_1">
         <MappingFragment StoreEntitySet="Table_1">

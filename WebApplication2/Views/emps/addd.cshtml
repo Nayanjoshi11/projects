@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "addd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+<form action="SaveData">
+
+    
+    <label class="col-md-2">Salary paid</label>
+    <div>
+        <input type="text" name="salary_paid" class="form-control" />
+    </div>
+    <label class="col-md-2">Paid date</label>
+    <div>
+        <input type="text" name="paid_date" class="form-control" />
+    </div>
+    <div>
+        <input type="submit" class="btn btn-success" value="Save" />
+
+    </div>
+</form>
+

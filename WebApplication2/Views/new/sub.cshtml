@@ -22,14 +22,15 @@
     @foreach (var data in Model)
     {
         <tr>
-            <td>@(++sn)</td>          
+            <td>@(++sn)</td>
             <td>@data.Name</td>
             <td>@data.Contact</td>
             <td>@data.Address</td>
+            <td><a href="@Url.Action("editt", new {id=data.id})">edit</a></td>
         </tr>
     }
 </table>
 
-<a href="@Url.Action("create")">
+<a href="@Url.Action("cret")">
     <h2>Add New Record</h2>
 </a>
