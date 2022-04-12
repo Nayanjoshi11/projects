@@ -5,13 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>parlok regusteration</title>
     <link rel = "stylesheet" href = "D:\4th sem\asp\WebApplication2\html\style.css">
 </head>
 
     <head>
         <title>bordered form</title>
     </head>
+    <script>
+        function validateform(){
+            var email=document.myform.email.value;
+            var password=document.myform.password.value;
+
+            if(email==null || email==""){
+                alert("Email must be Entered");
+                return false;
+            
+            }else if(password.length<6){
+                alert("Password must be at least 6 characters long");
+                return false;
+            }
+        }
+    </script>
     <body>
         <div class="topnav">
           <img class = "Logo" src="pngfind.com-tools-png-484633.png">
@@ -23,9 +38,9 @@
         </div>
         <h2>Sign in</h2>
         <form>
-            <fieldset>
-                <legend>INFO</legend>
-                <label>Fullname : <input type="text"></label><br><br>
+            <div class="container">
+                <label>Firstname : <input type="text"></label><br><br>
+                <label>Lastname : <input type="text"></label><br><br>
                 <label>Age : <input type="text"></label><br><br>
                 <label>Email : <input type="text"></label><br><br>
                 <label>Phone :<input type="text"></label><br><br>
@@ -33,8 +48,9 @@
                 <input type = "radio" id="male"name="gender"value="MALE">
                 <label for="male">MALE</label><br>
                 <input type = "radio" id="female"name="gender"value="FEMALE">
-                <label for="female">FEMALE</label><br>
-            </fieldset>
+                <label for="female">FEMALE</label><br><br>
+                <input type="submit" value="Sign in" name="submit">
+            </div>
         </form>
     </body>
 </html>
